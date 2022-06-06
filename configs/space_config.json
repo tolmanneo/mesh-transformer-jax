@@ -1,0 +1,41 @@
+{
+  "layers": 28,
+  "d_model": 4096,
+  "n_heads": 16,
+  "n_vocab": 50400,
+  "norm": "layernorm",
+  "pe": "rotary",
+  "pe_rotary_dims": 64,
+
+  "seq": 2048,
+  "cores_per_replica": 8,
+  "per_replica_batch": 1,
+  "gradient_accumulation_steps": 16,
+
+  "warmup_steps": 12,
+  "anneal_steps": 200,
+  "lr": 5e-5,
+  "end_lr": 1e-5,
+  "weight_decay": 0.1,
+  "total_steps": 212,
+
+  "tpu_size": 8,
+
+  "bucket": "gpt-j-6b",
+  "model_dir": "mesh_jax_space_6B_rotary",
+
+  "train_set": "space_text.train.index",
+  "val_set": {},
+
+  "eval_harness_tasks": [
+  ],
+
+  "val_batches": 0,
+  "val_every": 80,
+  "ckpt_every": 212,
+  "keep_every": 212,
+
+  "name": "GPT_J_6B_space_rotary",
+  "wandb_project": "mesh-transformer-jax",
+  "comment": ""
+}
