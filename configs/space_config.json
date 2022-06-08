@@ -12,17 +12,17 @@
   "per_replica_batch": 1,
   "gradient_accumulation_steps": 16,
 
-  "warmup_steps": 12,
+  "warmup_steps": 13,
   "anneal_steps": 200,
   "lr": 5e-5,
   "end_lr": 1e-5,
   "weight_decay": 0.1,
-  "total_steps": 212,
+  "total_steps": 213,
 
   "tpu_size": 8,
 
-  "bucket": "gpt-j-6b",
-  "model_dir": "mesh_jax_space_6B_rotary",
+  "bucket": "gpt-j-6b-us",
+  "model_dir": "checkpoint-gpt-j-6b",
 
   "train_set": "space_text.train.index",
   "val_set": {},
@@ -32,8 +32,8 @@
 
   "val_batches": 0,
   "val_every": 80,
-  "ckpt_every": 212,
-  "keep_every": 212,
+  "ckpt_every": 213,
+  "keep_every": 213,
 
   "name": "GPT_J_6B_space_rotary",
   "wandb_project": "mesh-transformer-jax",
